@@ -5,23 +5,29 @@
         <meta name="viewport" content="width=device-width, user-scalable=no,minimum-scale=1.0, maximum-scale=1.0">
    
         <style>
+                .wrapper{
+                        position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+                }
             .demo{
               width:100%;
-              min-height:100vh;
+              height:auto;
               display: flex;
-              flex-wrap: wrap;
+              align-items: flex-start;
               justify-content: space-around;
-              align-content: flex-start;
             } 
-
+            model-viewer{
+              flex-basis: 30%;
+              height: 150px;
+           
+            }
             body {
               background-image: linear-gradient(to right, rgba(161, 161, 161),rgba(255, 255, 255),rgba(161, 161, 161));
             }
   
-            model-viewer{
-              flex-basis: 30%;
-           
-            }
+            
          
             .para {
                 font-weight: bold;
@@ -32,109 +38,68 @@
     </head>
     <body>
         
-        <p class="para">Trending Gadgets</p>
-        <div class="demo">
+        <!-- <p class="para">Trending Gadgets</p> -->
+        <div class="wrapper">
+                <div class="demo">
 
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="5"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
+                        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                      auto-rotate camera-controls
+                                      shadow-intensity="5"
+                                      ar 
+                                      quick-look-browsers="safari chrome" 
+                                      background-color="#ffffff">
+                        </model-viewer>
+                
+                        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                      auto-rotate camera-controls
+                                      shadow-intensity="2"
+                                      ar 
+                                      quick-look-browsers="safari chrome" 
+                                      background-color="#ffffff">
+                        </model-viewer>
+                        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                      auto-rotate camera-controls
+                                      shadow-intensity="2"
+                                      ar 
+                                      quick-look-browsers="safari chrome" 
+                                      background-color="#ffffff">
+                        </model-viewer>
+                        </div>
+                        <div class="demo">
+                
+                                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                              ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                              auto-rotate camera-controls
+                                              shadow-intensity="5"
+                                              ar 
+                                              quick-look-browsers="safari chrome" 
+                                              background-color="#ffffff">
+                                </model-viewer>
+                        
+                                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                              ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                              auto-rotate camera-controls
+                                              shadow-intensity="2"
+                                              ar 
+                                              quick-look-browsers="safari chrome" 
+                                              background-color="#ffffff">
+                                </model-viewer>
+                                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
+                                              ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
+                                              auto-rotate camera-controls
+                                              shadow-intensity="2"
+                                              ar 
+                                              quick-look-browsers="safari chrome" 
+                                              background-color="#ffffff">
+                                </model-viewer>
+                                </div>
 
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mobile2.gltf"
-                      ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-                      auto-rotate camera-controls
-                      shadow-intensity="2"
-                      ar 
-                      quick-look-browsers="safari chrome" 
-                      background-color="#ffffff">
-        </model-viewer>
-
-        <model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mob4.gltf"
-        ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-        auto-rotate camera-controls
-        shadow-intensity="2"
-        ar ar-modes="webxr scene-viewer quick-look fallback"
-        quick-look-browsers="safari chrome" 
-        background-color="#ffffff">
-</model-viewer>
-<model-viewer src="https://raw.githubusercontent.com/jyotivasu/Web/master/Mob/mob3.gltf"
-        ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-        auto-rotate camera-controls
-        shadow-intensity="2"
-        ar ar-modes="webxr scene-viewer quick-look fallback"
-        quick-look-browsers="safari chrome" 
-        background-color="#ffffff">
-</model-viewer>
-<model-viewer src="https://modelviewer.dev/shared-assets/models/Astronaut.glb"
-        ios-src="https://github.com/jyotivasu/Web/blob/master/Mob/mobusdz1.usdz?raw=true" 
-        auto-rotate camera-controls
-        shadow-intensity="2"
-        ar ar-modes="webxr scene-viewer quick-look fallback"
-        quick-look-browsers="safari chrome" 
-        background-color="#ffffff">
-</model-viewer>
         </div>
+        
+                
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     
@@ -144,6 +109,7 @@
 <!--         <script type="module" src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer.js"></script>
          <script nomodule src="https://modelviewer.dev/node_modules/@google/model-viewer/dist/model-viewer-legacy.js"></script> -->
         
+         <!-- https://modelviewer.dev/shared-assets/models/Astronaut.glb -->
     
     </body>
 </html> 
