@@ -33,11 +33,27 @@
                margin-left: 50px;
             } 
 
-            #footer { 
+            .camera { 
                 position:absolute;                  
-                bottom:00px;                          
-                right:5px;                          
+                bottom:8px;                  
+                right:8px;                          
             } 
+            .mic { 
+                position:absolute;                  
+                bottom:0px;                  
+                right:50px;                          
+            } 
+
+            .visibleforsamsung{
+                   display: none;
+                    position: absolute;
+                        width: 100%;
+                        top: 50%;
+                        transform: translateY(-50%);
+              justify-content: space-around;
+              align-items: flex-start;
+              justify-content: space-around;
+            }
           </style>
     </head>
     <body>
@@ -102,20 +118,104 @@
                                 </div>
 
         </div>
-        
-        
-        <div id="footer">
-            <a href="https://justadudewhohacks.github.io/face-api.js/webcam_face_tracking/"><img src="https://img.icons8.com/android/24/000000/camera.png"/></a>
+
+        <div class="visibleforsamsung">
+
+                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/sample_project/master/gltfcombo/mobile3.gltf"
+                ios-src="https://github.com/nkjzm/ARQuickLookTest/blob/master/Astronaut.usdz?raw=true" 
+                ar auto-rotate camera-controls
+                shadow-intensity="5"
+                quick-look-browsers="safari chrome" 
+                background-color="#222">
+                </model-viewer>
+      
+                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/sample_project/master/gltfcombo/mobile.gltf"
+                ios-src="https://github.com/nkjzm/ARQuickLookTest/blob/master/Astronaut.usdz?raw=true" 
+                ar auto-rotate camera-controls
+                shadow-intensity="5"
+                quick-look-browsers="safari chrome" 
+                background-color="#222">
+                </model-viewer>
+      
+                <model-viewer src="https://raw.githubusercontent.com/jyotivasu/sample_project/master/gltfcombo/mobile3.gltf"
+                ios-src="https://github.com/nkjzm/ARQuickLookTest/blob/master/Astronaut.usdz?raw=true" 
+                ar auto-rotate camera-controls
+                shadow-intensity="5"
+                quick-look-browsers="safari chrome" 
+                background-color="#222">
+                </model-viewer>
         </div>
-                
+        
+  
+        <div class="camera">
+            <a href="https://justadudewhohacks.github.io/face-api.js/webcam_face_tracking/"><img src="https://img.icons8.com/android/24/000000/camera.png"/></a>
+             
+        </div>
+
+        <p id="demo" style="margin: 40px; wight: bold;"></p>
+        <!-- style="margin-bottom:9px; padding:3px"  -->
+              <div class="mic">
+                <img src="https://img.icons8.com/android/24/000000/microphone.png" onclick="record()" style="margin-bottom:0px; "/>      
+                <input type="text" name="" id="speechToText" placeholder="Speak Something" onclick="record()" style="margin-bottom:9px; padding:3px" >
+             </div>
+
+
+       <!-- Input area for voice -->
+    <!-- <label for="Speech Recognition">Speech Recognition</label> -->
+     
         <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
         <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     
-<!--         <script type="module" src="model-viewer.js"></script> 
+         <!-- <script type="module" src="model-viewer.js"></script> 
         <script type="module" src="model-viewer-legacy.js"></script>  -->
-
-        
          <!-- https://modelviewer.dev/shared-assets/models/Astronaut.glb -->
     
+
+    <!--  script for voice recognition -->
+        <script>
+
+        function record() {
+            var recognition = new webkitSpeechRecognition();
+            recognition.lang = "en-GB";
+
+            recognition.onresult = function(event) {
+                // console.log(event);
+                document.getElementById('speechToText').value = event.results[0][0].transcript;
+
+                // get the homepage model class
+                var divModelViewer = document.getElementsByClassName('wrapper');
+              
+              // get the hidden samsung devices
+              var divSamsung = document.getElementsByClassName('visibleforsamsung');              
+
+               //display and hide mobile phones on speech recognition
+               if(document.getElementById('speechToText').value.includes("Samsung")){
+                document.getElementById("demo").innerHTML = "Samsung devices found:";
+                
+                for (var i = 0; i < divModelViewer.length; i ++) {
+                        divModelViewer[i].style.display = 'none';
+                }
+
+                for (var i = 0; i < divSamsung.length; i ++) {
+                        divSamsung[i].style.display = 'flex';
+                }
+               }
+               else{
+                for (var i = 0; i < divModelViewer.length; i ++) {
+                        divModelViewer[i].style.display = 'block';
+                }
+                for (var i = 0; i < divSamsung.length; i ++) {
+                        divSamsung[i].style.display = 'none';
+                }
+                document.getElementById("demo").innerHTML = "";
+               }
+                
+            }
+            recognition.start();
+
+        }
+    </script>
+
+
     </body>
-</html>  
+</html> 
